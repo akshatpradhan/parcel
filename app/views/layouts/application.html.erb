@@ -39,19 +39,16 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Parcel</a>
-          <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          <div class="row">
+            <div class="span5">
+              <a class="brand" href="#">Parcel</a>
+              <ul class="nav">
+                <li><%= link_to "how it works", "/path1"  %></li>
+                <li><%= link_to "sign up", "/path2"  %></li>
+                <li><%= link_to "login", "/path3"  %></li>
+              </ul>  
+            </div>
+          </div>
         </div>
       </div>
     </div>
