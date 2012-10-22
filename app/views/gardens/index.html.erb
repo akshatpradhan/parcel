@@ -10,7 +10,6 @@
       <th><%= model_class.human_attribute_name(:_id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -22,7 +21,6 @@
         <td><%= garden._id %></td>
         <td><%= garden.title %></td>
         <td><%= garden.description %></td>
-        <td><%=l garden.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_garden_path(garden), :class => 'btn btn-mini' %>
