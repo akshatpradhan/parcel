@@ -44,8 +44,13 @@
               <a class="brand" href="#">Parcel</a>
               <ul class="nav">
                 <li><%= link_to "how it works", "/path1"  %></li>
-                <li><%= link_to "sign up", "/path2"  %></li>
-                <li><%= link_to "login", "/path3"  %></li>
+                <li>
+                  <% if current_user %>
+                    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+                  <% else %>
+                    <%= link_to "login/register", "/auth/facebook", id: "sign_in" %>
+                  <% end %>
+                </li>
               </ul>  
             </div>
           </div>

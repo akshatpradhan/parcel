@@ -34,6 +34,6 @@ gem 'unicorn'
 
 # To use debugger
 gem 'debugger'
-gem 'rspec'
 gem 'mongoid'
 gem 'twitter-bootstrap-rails'
+gem 'omniauth-facebook'
