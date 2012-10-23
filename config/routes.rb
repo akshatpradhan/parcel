@@ -1,7 +1,10 @@
 Parcel::Application.routes.draw do
-  resources :gardens
 
-  get "home/index"
+  match 'auth/:provider/callback', to: 'authentications#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'authentications#destroy', as: 'signout'
+
+  resources :gardens
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
