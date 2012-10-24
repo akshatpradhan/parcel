@@ -25,7 +25,7 @@
         <tr>
           <td>
             <h3>
-              <%= link_to garden.title, garden_path(garden) %>
+              <%= garden.title %>
             </h3>
             <p>
               <%= garden.created_at %>
@@ -39,7 +39,12 @@
           </td>
           <td></td>
           <td>
-            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+            <%= button_to "Contact", new_garden_path,
+                :class => "btn btn-mini pull-right", :method => :get %>
+          </td>
+          <td></td>
+          <td>
+           <%= link_to t('.edit', :default => t("helpers.links.edit")),
             edit_garden_path(garden), :class => 'btn btn-mini' %>
             <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
             garden_path(garden),
