@@ -3,6 +3,7 @@ class GardensController < ApplicationController
   # GET /gardens.json
   def index
     @gardens = Garden.all
+    @json = Garden.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb

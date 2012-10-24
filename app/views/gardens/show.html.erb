@@ -1,18 +1,23 @@
-<%- model_class = Garden -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+<div class="row">
+  <div class="span12">
+    <h3><%= @garden.title %></h3>    
+  </div>
+</div>
+<div class="row">
+  <div class="span12">
+    <p>Date: <%= @garden.created_at %></p>
+  </div>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:_type) %>:</strong></dt>
-  <dd><%= @garden._type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:_id) %>:</strong></dt>
-  <dd><%= @garden._id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @garden.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @garden.description %></dd>
-</dl>
+<div class="row">
+  <div class="span8">
+      <p><%= @garden.description %></p>
+
+  </div>
+  <div class="span4">
+
+    <img src="http://placehold.it/640x480" class="img-polaroid">
+
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
@@ -25,3 +30,9 @@
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
 </div>
+  </div>
+</div>
+
+
+
+

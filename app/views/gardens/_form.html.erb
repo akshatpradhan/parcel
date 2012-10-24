@@ -1,17 +1,5 @@
 <%= form_for @garden, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :_type, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :_type, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :_id, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :_id, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :title, :class => 'text_field' %>
@@ -21,6 +9,12 @@
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :description, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address, :class => 'text_field' %>
     </div>
   </div>
 
