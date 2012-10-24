@@ -17,7 +17,6 @@ class GardensController < ApplicationController
     @garden = Garden.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
       format.json { render json: @garden }
     end
   end
@@ -45,7 +44,7 @@ class GardensController < ApplicationController
 
     respond_to do |format|
       if @garden.save
-        format.html { redirect_to @garden, notice: 'Garden was successfully created.' }
+        format.html { redirect_to gardens_url, notice: 'Garden was successfully created.' }
         format.json { render json: @garden, status: :created, location: @garden }
       else
         format.html { render action: "new" }
@@ -61,7 +60,7 @@ class GardensController < ApplicationController
 
     respond_to do |format|
       if @garden.update_attributes(params[:garden])
-        format.html { redirect_to @garden, notice: 'Garden was successfully updated.' }
+        format.html { redirect_to gardens_url, notice: 'Garden was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

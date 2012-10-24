@@ -3,7 +3,7 @@
   <div class="span12">
     <div class="page-header">
       <h3>Turn idle backyards into fresh fruits and veggies</h3>
-    </div>    
+    </div>
   </div>
 </div>
 <div class="row">
@@ -28,6 +28,12 @@
               <%= link_to garden.title, garden_path(garden) %>
             </h3>
             <p>
+              <%= garden.created_at %>
+            </p>
+            <p>
+              <%= garden.description %>
+            </p>
+            <p>
               <%= garden.address %>
             </p>
           </td>
@@ -47,7 +53,7 @@
     </table>
 
 
-    
+
   </div> <!-- span8 -->
-  
+
 </div>
