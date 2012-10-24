@@ -40,23 +40,29 @@
       <div class="navbar-inner">
         <div class="container">
           <div class="row">
-            <div class="span5">
-              <a class="brand" href="#">Parcel</a>
-              <ul class="nav">
+            <div class="span4">
+              <a class="brand" href="/">Parcel</a>
+            </div>
+            <div class="span6">
+              <ul class="nav pull-right">
                 <li><%= link_to "how it works", "/path1"  %></li>
                 <li>
                   <% if current_user %>
-                    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+                  <%= link_to "sign out", signout_path, id: "sign_out" %>
                   <% else %>
-                    <%= link_to "login/register", "/auth/facebook", id: "sign_in" %>
+                  <%= link_to "login/register", "/auth/facebook", id: "sign_in" %>
                   <% end %>
                 </li>
-              </ul>  
+              </ul>
+            </div>
+            <div class="span2">
+              <%= button_to "List your space", new_garden_path,
+                  :class => "btn btn-primary pull-right", :method => :get %>
             </div>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
 
     <div class="container">
       <div class="row">
@@ -75,6 +81,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
-
+    <%= yield :scripts %>
   </body>
 </html>
