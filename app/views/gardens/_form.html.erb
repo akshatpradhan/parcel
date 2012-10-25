@@ -1,26 +1,19 @@
-<%= form_for @garden, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :title, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :title, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :description, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :description, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :address, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :address, :class => 'text_field' %>
-    </div>
-  </div>
-
+<div class="row">
+<div class="span3 offset1">
+  <h4>About your garden</h4>
+</div>
+  
+</div>
+<%= simple_form_for @garden, :html => {:class => 'form-horizontal' } do |f| %>
+  <%= f.input :title %>
+  <%= f.input :address %>
+  <%= f.input :description, :as => :text, :input_html => {
+  :placeholder => "Tell travelers about comforts and amenities,
+  closeness to sites and attractions, and basics like internet, cable,
+  parking. Are you a great host? Tell them that too!", :rows => 5,
+  :cols => 500 } %>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                gardens_path, :class => 'btn' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), gardens_path, :class => 'btn' %>
   </div>
 <% end %>
