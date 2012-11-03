@@ -20,7 +20,7 @@
       </thead>
       <tbody>
         <% @gardens.each do |garden| %>
-        <tr>
+        <tr class="garden-row" garden-id="<%= garden._id %>">
           <td>
             <h3>
               <%= link_to garden.title, garden_path(garden) %>

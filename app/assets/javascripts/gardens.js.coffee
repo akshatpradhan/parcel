@@ -3,6 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
+  markers = {}
   boston = new google.maps.LatLng 42.3583, -71.0603
   map = new google.maps.Map $("#garden_map")[0],
     zoom: 15
@@ -21,7 +22,12 @@ $ ->
 
   $.get "/gardens.json", (gardens) ->
     gardens.forEach (garden) ->
-      marker = new google.maps.Marker
+      markers[garden._id] = new google.maps.Marker
         position: new google.maps.LatLng(garden.position[0], garden.position[1])
         title: garden.title
-      marker.setMap map
+      markers[garden._id].setMap map
+
+  $(".garden-row").hover ->
+    gardenId = $(@).attr('garden-id')
+    map.setCenter markers[gardenId].getPosition()
+
