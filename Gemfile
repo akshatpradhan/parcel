@@ -26,8 +26,8 @@ gem 'jquery-rails'
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
 
-# Use unicorn as the app server
-gem 'unicorn'
+# Use thin as the app server
+gem 'thin'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -37,6 +37,4 @@ gem 'debugger'
 gem 'mongoid'
 gem 'twitter-bootstrap-rails'
 gem 'omniauth-facebook'
-gem 'gmaps4rails'
 gem 'simple_form'
-gem 'thin'
