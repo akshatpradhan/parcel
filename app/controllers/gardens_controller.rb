@@ -3,11 +3,6 @@ class GardensController < ApplicationController
   # GET /gardens.json
   def index
     @gardens = Garden.all
-    @json = Garden.all.to_gmaps4rails do |garden, marker|
-      marker.json({ :id => garden.id })
-    end
-
-
 
     respond_to do |format|
       format.html # index.html.erb

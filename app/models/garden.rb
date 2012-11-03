@@ -1,9 +1,9 @@
 class Garden
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Gmaps4rails::ActsAsGmappable
+  # include Gmaps4rails::ActsAsGmappable
 
-  acts_as_gmappable :address => :address, :position => :position
+  # acts_as_gmappable :address => :address, :position => :position
 
   field :title,       type: String
   field :description, type: String
