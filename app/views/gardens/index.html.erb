@@ -25,7 +25,7 @@
         <tr>
           <td>
             <h3>
-              <%= garden.title %>
+              <%= link_to garden.title, garden_path(garden) %>
             </h3>
             <p>
               <%= garden.created_at %>
