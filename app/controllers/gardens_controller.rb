@@ -7,8 +7,6 @@ class GardensController < ApplicationController
       marker.json({ :id => garden.id })
     end
 
-
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @gardens }
@@ -46,6 +44,7 @@ class GardensController < ApplicationController
   # POST /gardens.json
   def create
     @garden = Garden.new(params[:garden])
+    @garden.user = current_user
 
     respond_to do |format|
       if @garden.save
@@ -62,6 +61,7 @@ class GardensController < ApplicationController
   # PUT /gardens/1.json
   def update
     @garden = Garden.find(params[:id])
+    @garden.user = current_user
 
     respond_to do |format|
       if @garden.update_attributes(params[:garden])

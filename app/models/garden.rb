@@ -10,4 +10,6 @@ class Garden
   field :address,     type: String
   field :position,    type: Array
   field :gmaps,       type: Boolean
+
+  belongs_to :user
 end
