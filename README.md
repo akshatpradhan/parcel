@@ -11,3 +11,4 @@ http://www.youtube.com/watch?v=sw_FiKyD4bg&feature=plcp
 
 ![Screenshot](https://raw.github.com/akshatpradhan/parcel/master/parcel.png)
 
+PS if anybody is interesting in rewriting this in Meteor with me, I'm all game. 
