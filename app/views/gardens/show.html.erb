@@ -15,23 +15,33 @@
       <p><%= @garden.user.first_name %></p>
       <p><%= @garden.user.email %></p>
       <p><%= @garden.neighborhood %></p>
+      <img src="http://placehold.it/320x240" class="img-polaroid">
 
   </div>
   <div class="span4">
 
-    <img src="http://placehold.it/640x480" class="img-polaroid">
+<div class="well">
+  <%= simple_form_for @garden do |f| %>
+  <h5>Message Parcel Holder</h5>
+  <!-- Change :description to :message -->
+  <%= f.input :description, :as => :text, :input_html => {
+  :placeholder => "Why are you interested in this Parcel? What do you
+  plan to grow and give to the parcel holder?", :rows => 4,
+  :cols => 500 } %>
+  <%= f.submit 'Send message', :class => 'btn' %>
+  <% end %>        
+</div>
 
-
-<div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
+    <div class="form-actions">
+      <%= link_to t('.back', :default => t("helpers.links.back")),
               gardens_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+      <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_garden_path(@garden), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+      <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               garden_path(@garden),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
-</div>
+    </div>
   </div>
 </div>

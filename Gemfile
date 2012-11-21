@@ -21,7 +21,6 @@ end
 
 gem 'jquery-rails'
 
-# 
 gem 'thin'
 
 # To use Jbuilder templates for JSON
@@ -40,3 +39,4 @@ gem 'twitter-bootstrap-rails'
 gem 'omniauth-facebook'
 gem 'gmaps4rails'
 gem 'simple_form'
+#gem 'hominid'
