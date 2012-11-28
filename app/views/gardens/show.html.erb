@@ -23,6 +23,7 @@
 
 
 <div class="form-actions">
+  <% if @user==current_user %>
   <%= link_to t('.back', :default => t("helpers.links.back")),
               gardens_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -32,6 +33,7 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+            <% end %>
 </div>
   </div>
 </div>
