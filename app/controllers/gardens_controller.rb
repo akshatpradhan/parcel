@@ -1,4 +1,6 @@
 class GardensController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
+
   # GET /gardens
   # GET /gardens.json
   def index
@@ -38,6 +40,7 @@ class GardensController < ApplicationController
   # GET /gardens/1/edit
   def edit
     @garden = Garden.find(params[:id])
+    authorize! :update, @garden
   end
 
   # POST /gardens
@@ -78,6 +81,7 @@ class GardensController < ApplicationController
   # DELETE /gardens/1.json
   def destroy
     @garden = Garden.find(params[:id])
+    authorize! :destroy, @garden
     @garden.destroy
 
     respond_to do |format|
