@@ -23,24 +23,24 @@
       <tbody>
         <% @gardens.each do |garden| %>
         <tr>
+          <td><img src="http://placehold.it/160x120" alt=""></td>
           <td>
             <h3>
               <%= link_to garden.title, garden_path(garden) %>
             </h3>
             <p>
-              <%= garden.created_at %>
+              <strong><%= garden.neighborhood %></strong>
             </p>
             <p>
               <%= garden.description %>
             </p>
             <p>
-              <%= garden.neighborhood %>
+              <small><%= garden.created_at %></small>
             </p>
-          </td>
-          <td></td>
-          <td>
 
           </td>
+
+          <td> </td>
           <td></td>
           <td></td>
         </tr>
