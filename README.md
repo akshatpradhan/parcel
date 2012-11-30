@@ -15,7 +15,8 @@ vegetable gardens?" and Parcel happened.
 
 ![Screenshot](https://raw.github.com/akshatpradhan/parcel/master/parcel.png)
 
-[suggest a new idea](https://github.com/akshatpradhan/parcel/issues)
+[suggest a new idea](https://github.com/akshatpradhan/parcel/issues) |
+[get running locally](https://github.com/akshatpradhan/parcel/wiki)
 
 * PS if anybody is interested in writing a Meteor app interface with
   me, I'm all game. Just send me an email
