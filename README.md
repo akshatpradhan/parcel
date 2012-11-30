@@ -1,14 +1,27 @@
-parcel
-======
+### parcel ###
 
-This project grew out of my own personal frustrations with finding a garden to grow vegetables. I live in Boston, and gardening is impossible. I thought about indoor gardens, and while I think its a very cool idea, the extra stuff impeding on my minimal lifestyle always thwarted me. 
+[how it works ](http://youtu.be/sw_FiKyD4bg?hd=1) |
+[list your parcel](http://parcel.herokuapp.com) 
 
-As an alternative, I signed up for the Fenway Gardens, and I never heard back from them. While at a Hackathon, I met an individual named Alex who came up with the idea of sharing vegetable gardens. My friend Jared and I built the first version in Meteor (We were playing around with the framework). After the Hackathon, I rewrote everything in Rails and here we have Parcel.
+## Turn idle back yards into fresh fruits and veggies ##
 
-#### Video on YouTube
+This project grew out of my own personal frustrations with finding a
+garden to grow vegetables. I live in Boston, and gardening is
+impossible. As an alternative, I signed up for the Fenway Gardens, and
+I never heard back from them.
 
-http://www.youtube.com/watch?v=sw_FiKyD4bg&feature=plcp
+At Vampire Hackathon, we thought, "hey, what about people sharing
+vegetable gardens?" and Parcel happened.
 
 ![Screenshot](https://raw.github.com/akshatpradhan/parcel/master/parcel.png)
 
-PS if anybody is interesting in rewriting this in Meteor with me, I'm all game. 
+[suggest a new idea](https://github.com/akshatpradhan/parcel/issues)
+
+* PS if anybody is interested in writing a Meteor app interface with
+  me, I'm all game. Just send me an email
+
+#### Contributors ####
+
++ @akshatpradhan
++ @jchubber
++ @alexandrelynn

@@ -29,7 +29,12 @@
             </div>
             <div class="span6">
               <ul class="nav pull-right">
-                <li><%= link_to "how it works", "/path1"  %></li>
+                <li>
+                  <%= link_to "suggest a new idea", "https://github.com/akshatpradhan/parcel/issues" %>
+                </li>
+                <li>
+                  <%= link_to "how it works", "http://youtu.be/sw_FiKyD4bg?hd=1" %>
+                </li>
                 <li>
                   <% if current_user %>
                   <%= link_to "sign out", signout_path, id: "sign_out" %>

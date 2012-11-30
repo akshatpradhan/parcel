@@ -23,8 +23,8 @@
 
 
 <div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              gardens_path, :class => 'btn'  %>
+  <%= button_to "Contact", new_garden_path,
+      :class => "btn", :method => :get %>
   <% if can? :update, @garden %>
     <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_garden_path(@garden), :class => 'btn' %>
