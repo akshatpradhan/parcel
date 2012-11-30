@@ -17,38 +17,36 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>20 gardens</th>
+          <th>20 parcels</th>
         </tr>
       </thead>
       <tbody>
         <% @gardens.each do |garden| %>
         <tr>
-          <td><img src="http://placehold.it/160x120" alt=""></td>
           <td>
-            <h3>
-              <%= link_to garden.title, garden_path(garden) %>
-            </h3>
-            <p>
-              <strong><%= garden.neighborhood %></strong>
-            </p>
-            <p>
-              <%= garden.description %>
-            </p>
-            <p>
-              <small><%= garden.created_at %></small>
-            </p>
-
+            <img src="http://placehold.it/100x60" alt="" />
           </td>
-
-          <td> </td>
-          <td></td>
-          <td></td>
+          <td>
+              <%= link_to garden.title, garden_path(garden) %>
+          </td>
+          <td>
+            <small><%= garden.neighborhood %></small>
+          </td>
+          <td>
+            <small><%= garden.created_at.strftime("%d %b %Y") %></small>
+          </td>
         </tr>
         <% end %>
       </tbody>
     </table>
-
-
+    <ul class="pager">
+      <li class="previous disabled">
+        <a href="#">&larr; Older</a>
+      </li>
+      <li class="next disabled">
+        <a href="#">Newer &rarr;</a>
+      </li>
+    </ul>
   </div> <!-- span8 -->
 
 </div>

@@ -1,41 +1,47 @@
 <div class="row">
   <div class="span12">
-    <h3><%= @garden.title %></h3>    
-  </div>
-</div>
-<div class="row">
-  <div class="span12">
-    <p>Date: <%= @garden.created_at %></p>
+    <div class="page-header">
+      <h2><%= @garden.title %> <small> <%= @garden.neighborhood %></small></h2>
+    </div>
   </div>
 </div>
 
 <div class="row">
   <div class="span8">
-      <p><%= @garden.description %></p>
-      <p><%= @garden.user.first_name %></p>
-      <p><%= @garden.user.email %></p>
-      <p><%= @garden.neighborhood %></p>
-
+    <h3>Description</h3>
+    <p><%= @garden.description %></p>
+    <h3>Photos</h3>
+    <img src="http://placehold.it/300x300" class="img-polaroid">
   </div>
   <div class="span4">
-
-    <img src="http://placehold.it/640x480" class="img-polaroid">
-
-
-<div class="form-actions">
-  <%= button_to "Contact", new_garden_path,
-      :class => "btn", :method => :get %>
-  <% if can? :update, @garden %>
-    <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_garden_path(@garden), :class => 'btn' %>
-  <% end %>
-  <% if can? :destroy, @garden %>
-    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    <div class="well">
+      <dl>
+        <dt>Available from</dt>
+        <dd><%= @garden.created_at.strftime("%d %b %Y") %></dd>
+        <dt>Vacancies</dt>
+        <dd>1</dd>
+      </dl>
+    </div>
+    <div class="well">
+      <dl>
+        <dt>Contact</dt>
+        <dd><%= @garden.user.first_name %></dd>
+        <dt>Message</dt>
+        <dd><textarea rows="3" placeholder="Ask the parcel owner a question..."></textarea></dd>
+      </dl>
+      <%= button_to "Message", new_garden_path,
+          :class => "btn", :method => :get %>
+      <% if can? :update, @garden %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          edit_garden_path(@garden), :class => 'btn' %>
+      <% end %>
+      <% if can? :destroy, @garden %>
+        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               garden_path(@garden),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
-  <% end %>
-</div>
+      <% end %>
+    </div>
   </div>
 </div>
