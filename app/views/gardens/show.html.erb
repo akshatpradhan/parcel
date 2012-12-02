@@ -11,26 +11,19 @@
     <h3>Description</h3>
     <p><%= @garden.description %></p>
     <h3>Photos</h3>
-    <img src="http://placehold.it/300x300" class="img-polaroid">
+    <img src="http://placehold.it/300x300&text=photos+coming+soon!" class="img-polaroid">
   </div>
   <div class="span4">
     <div class="well">
+      <h5></h5>
       <dl>
-        <dt>Available from</dt>
-        <dd><%= @garden.created_at.strftime("%d %b %Y") %></dd>
-        <dt>Vacancies</dt>
-        <dd>1</dd>
-      </dl>
-    </div>
-    <div class="well">
-      <dl>
-        <dt>Contact</dt>
-        <dd><%= @garden.user.first_name %></dd>
+        <dt>Want to work on this garden?</dt>
+        <dd>Send a message to <%= @garden.user.first_name %></dd> <br />
         <dt>Message</dt>
-        <dd><textarea rows="3" placeholder="Ask the parcel owner a question..."></textarea></dd>
+        <dd><textarea rows="3" placeholder="Ask about the availability of working on the garden"></textarea></dd>
       </dl>
       <%= button_to "Message", new_garden_path,
-          :class => "btn", :method => :get %>
+          :class => "btn disabled", :method => :get, :disabled => "disabled" %>
       <% if current_user %>
         <% if can? :update, @garden %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_garden_path(@garden), :class => 'btn' %>
