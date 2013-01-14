@@ -1,0 +1,13 @@
+<%= simple_form_for @garden, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :_type %>
+  <%= f.input :_id %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :neighborhood %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                gardens_path, :class => 'btn' %>
+  </div>
+<% end %>
