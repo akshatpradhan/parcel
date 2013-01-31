@@ -15,13 +15,11 @@
                                  "markers" => { "data" => @json }) %>
   </div>
   <div class="span8">
+    <h5>
+      Some spaces to garden
+    </h5>
     <table class="table table-striped">
       <thead>
-        <tr>
-          <td>
-            <h5>Some spaces to garden</h5>
-          </td>
-        </tr>
       </thead>
       <tbody>
         <% @gardens.each do |garden| %>
@@ -29,7 +27,7 @@
           <td>
             <img src="http://placehold.it/100x70&text=pics+coming!" alt="" />
           </td>
-          <td class="span4">
+          <td>
               <%= link_to garden.title, garden_path(garden) %>
           </td>
           <td>
