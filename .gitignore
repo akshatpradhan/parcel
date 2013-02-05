@@ -130,3 +130,11 @@ tramp
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore Foreman local files:
+/.env
+/local-env
+
+# Ignore developer local files:
+/out/
+/private/

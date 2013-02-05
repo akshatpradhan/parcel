@@ -33,6 +33,9 @@ group :development do
   gem 'better_errors', '>= 0.3.2'
   gem 'binding_of_caller', '>= 0.6.8'
   gem 'debugger'
+# Avoid bug in pry:
+  gem 'pry', '~> 0.9.11.3', '!= 0.9.11.4'
+  gem 'pry-doc', '~> 0.4.4'
   gem 'pry-rails'
   gem 'quiet_assets', '>= 1.0.1'
 end
