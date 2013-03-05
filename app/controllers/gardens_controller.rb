@@ -1,11 +1,9 @@
 class GardensController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
-
   # GET /gardens
   # GET /gardens.json
   def index
     @gardens = Garden.all
-    @json = Garden.all.to_gmaps4rails do |garden, marker|
+    @json = @gardens.to_gmaps4rails do |garden, marker|
       marker.json({ :id => garden.id })
     end
 
@@ -40,14 +38,12 @@ class GardensController < ApplicationController
   # GET /gardens/1/edit
   def edit
     @garden = Garden.find(params[:id])
-    authorize! :update, @garden
   end
 
   # POST /gardens
   # POST /gardens.json
   def create
     @garden = Garden.new(params[:garden])
-    @garden.user = current_user
 
     respond_to do |format|
       if @garden.save
@@ -64,7 +60,6 @@ class GardensController < ApplicationController
   # PUT /gardens/1.json
   def update
     @garden = Garden.find(params[:id])
-    @garden.user = current_user
 
     respond_to do |format|
       if @garden.update_attributes(params[:garden])
@@ -81,7 +76,6 @@ class GardensController < ApplicationController
   # DELETE /gardens/1.json
   def destroy
     @garden = Garden.find(params[:id])
-    authorize! :destroy, @garden
     @garden.destroy
 
     respond_to do |format|

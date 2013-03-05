@@ -1,18 +1,18 @@
 <div class="row">
-<div class="span3 offset1">
-  <h4>About your Parcel</h4>
+  <div class="span3 offset1">
+    <h4>About your parcel</h4>
+  </div>
 </div>
-  
-</div>
-<%= simple_form_for @garden, :html => {:class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @garden, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :title %>
   <%= f.input :address %>
   <%= f.input :description, :as => :text, :input_html => {
-  :placeholder => "Tell Gardeners about amenities,
-  closeness to transportation, soil quality, tools need, and parking. Are you a great host? Tell them that too!", :rows => 5,
-  :cols => 500 } %>
+  :placeholder => "Tell Gardeners about amenities, closeness to
+  transportation, soil quality, tools needed, and parking. Are you a
+  great host? Tell them that too!", :rows => 5, :cols => 500 } %>
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), gardens_path, :class => 'btn' %>
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                gardens_path, :class => 'btn' %>
   </div>
 <% end %>

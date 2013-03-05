@@ -1,5 +1,8 @@
 <%- model_class = Garden -%>
 <div class="page-header">
-  <h3>List your garden.</h3>
+  <h3>
+    <%=t '.title', :default => t('helpers.titles.new', :model =>
+    model_class.model_name.human, :default => "List your garden") %>
+  </h3>
 </div>
 <%= render :partial => 'form' %>

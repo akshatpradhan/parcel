@@ -15,11 +15,11 @@
                                  "markers" => { "data" => @json }) %>
   </div>
   <div class="span8">
+    <h5>
+      Some spaces to garden
+    </h5>
     <table class="table table-striped">
       <thead>
-        <tr>
-          <h5>Some spaces to garden<h5>
-        </tr>
       </thead>
       <tbody>
         <% @gardens.each do |garden| %>
@@ -41,5 +41,5 @@
       </tbody>
     </table>
   </div> <!-- span8 -->
-
 </div>
+<%= yield :scripts %>

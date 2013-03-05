@@ -17,8 +17,6 @@ class Garden
   field :position,     type: Array
   field :gmaps,        type: Boolean
 
-  belongs_to :user
-
   def save_neighborhood(data)
     data["address_components"].each do |c|
       if c["types"].include? "neighborhood"

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="span4">
+    <%= link_to "Parcel", root_path, :class => 'brand' %>
+  </div>
+  <!-- Right Nav -->
+  <div class="span6">
+    <ul class="nav pull-right">
+        <li>
+          <%= link_to "how it works", "http://youtu.be/sw_FiKyD4bg?hd=1" %>
+        </li>
+        <li>
+          <%= link_to "suggest a new idea", "https://github.com/akshatpradhan/parcel/issues" %>
+        </li>
+      <% if user_signed_in? %>
+        <li>
+        <%= link_to 'Logout', signout_path %>
+        </li>
+      <% else %>
+        <li>
+        <%= link_to 'login/register', signin_path %>
+        </li>
+      <% end %>
+      <% if user_signed_in? %>
+        <% if current_user.has_role? :admin %>
+          <li>
+          <%= link_to 'Admin', users_path %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="span2">
+    <%= link_to "List your space", new_garden_path, :class => "btn btn-primary pull-right", :method => :get  %>
+  </div>
+</div>

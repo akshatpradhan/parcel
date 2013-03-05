@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Parcel::Application.config.secret_token = 'ebea5d2d69016e7d72b76b3a909fd06e4f4ed5b883e4b53b616f14539c8ef6bfa926903bdbb8d81a9858c6f389695591ac2ed48afba6c69213a6578be23a0e1f'
+Parcel::Application.config.secret_token = '8af8a33b66905f7edeae7fae90059b6968276c4ab6cab15b9aab1e7ebe25b1e0ba81de80d3c9b1de393d6726955b71c290c70c531260632d17cee20ffaecc025'
